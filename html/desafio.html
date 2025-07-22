@@ -1,0 +1,75 @@
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cadastro de Receitas e Despesas</title>
+    </head>
+    <body>
+        <h1>Cadastro de Receitas e Despesas</h1>
+
+        <form action="salvar">
+            <div>
+                <div>
+                    <label for="descricao"><strong>Descrição:</strong></label>
+                </div>
+                <input 
+                    type="text"
+                    id="descricao"
+                    name="descricao">
+            </div>
+
+            <div>
+                <div>
+                    <label for="observacao"><strong>Observação:</strong></label>
+                </div>
+                <textarea 
+                    id="observacao"
+                    name="observacao">
+                </textarea>
+            </div>
+
+            <div>
+                <div>
+                    <label for=""><strong>Tipo:</strong></label>
+                </div>
+                <div>
+                    <label for="receita">Receita</label>
+                    <input type="radio" name="tipo" id="receita" value="receita">
+                    <label for="despesa">Despesa</label>
+                    <input type="radio" name="tipo" id="despesa" value="despesa">
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <label for="valor"><strong>Valor:</strong></label>
+                </div>
+                <input 
+                    type="number"
+                    id="valor"
+                    name="valor">
+            </div>
+
+            <div>
+                <div>
+                    <label for="consolidado"><strong>Consolidado?</strong></label>
+                </div>
+                <input type="checkbox" id="consolidado" name="consolidado">
+            </div>
+
+            <div>
+                <div>
+                    <label for="contaAssociada"><strong>Conta Associada:</strong></label>
+                </div>
+                <select name="contaAssociada" id="contaAssociada">
+                    <option value="Nenhuma">Nenhuma</option>
+                    <option value="ITAU">ITAU</option>
+                    <option value="Nubank">Nu Bank</option>
+                    <option value="C6">C6</option>
+                </select>
+            </div>
+
+            <input type="submit" value="Salvar">
+            <input type="reset" value="Cancelar">
+        </form>
+    </body>
+</html>

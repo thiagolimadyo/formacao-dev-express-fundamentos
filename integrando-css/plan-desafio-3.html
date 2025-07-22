@@ -1,0 +1,82 @@
+<html lang="pt-BR">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>Desafio CSS #3</title>
+        <style>
+            html {
+                background-color: #111;
+                color: #AAA;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            a:visited {
+                color: purple;
+            }
+
+            h1 {
+                margin: 0;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 2rem;
+            }
+
+            .produto-item {
+                display: flex;
+                flex-direction: column;
+                width: 280px;
+                height: 400px;
+                border: 1px solid #555;
+                border-radius: 0.5rem;
+                overflow: hidden;
+                background-color: #222;
+            }
+
+            .produto-info {
+                display: flex;
+                flex-direction: column;
+                flex:1;
+                justify-content: space-between;
+                padding: 1rem;
+            }
+            .stars {
+                max-width: 1rem;
+            }
+
+            [sub-titulo] {
+                font-weight: 500;
+            }
+
+            .produto-info > p {
+                margin: 0;
+                font-size: 0.75rem;
+                color: #999;
+                text-align: justify;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Desafio CSS #3</h1>
+            <div class="produto-item">
+                <img src="https://lojaintegrada.wpenginepowered.com/wp-content/uploads/2024/03/arranjo-de-colecao-estacionario-moderno-eletronicos-mais-vendidos-1024x684.webp" alt="">
+                <div class="produto-info">
+                    <span sub-titulo><b>Kit Antenado 2025</b></span>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur explicabo praesentium distinctio aspernatur accusamus nam voluptates sapiente magnam tempore ut! Molestiae quam odit et alias dolorum a ea eos consectetur.</p>
+                    <div>
+                        <img src="https://th.bing.com/th/id/R.83593b891c3d1c6e89e6b60539b8add4?rik=YCfS5JKIS%2bgjug&pid=ImgRaw&r=0" alt="" class="stars">
+                        <img src="https://th.bing.com/th/id/R.83593b891c3d1c6e89e6b60539b8add4?rik=YCfS5JKIS%2bgjug&pid=ImgRaw&r=0" alt="" class="stars">
+                        <img src="https://th.bing.com/th/id/R.83593b891c3d1c6e89e6b60539b8add4?rik=YCfS5JKIS%2bgjug&pid=ImgRaw&r=0" alt="" class="stars">
+                        <img src="https://th.bing.com/th/id/R.83593b891c3d1c6e89e6b60539b8add4?rik=YCfS5JKIS%2bgjug&pid=ImgRaw&r=0" alt="" class="stars">
+                        <img src="https://th.bing.com/th/id/R.83593b891c3d1c6e89e6b60539b8add4?rik=YCfS5JKIS%2bgjug&pid=ImgRaw&r=0" alt="" class="stars">
+                    </div>
+                </div>
+            </div>
+            <a href="./exercicios.html">Voltar</a>
+        </div>
+    </body>
+</html>

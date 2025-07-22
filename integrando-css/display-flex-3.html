@@ -1,0 +1,72 @@
+<html lang="pt-BR">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>Flexbox</title>
+        <style>
+            html {
+                background-color: #292727;
+                color: white;
+            }
+
+            a:visited {
+                color: white;
+            }
+
+            .flexbox{
+                display: flex;
+                /* Define o eixo principal */
+                flex-direction: column;
+                /* Main Axis */
+                justify-content: center;
+                /* Cross Axis */
+                align-items: center;
+                gap: 2rem;
+            }
+
+            .externo {
+                height: 400px;
+                background-color: darkgoldenrod;
+                border: 1px solid white;
+                border-radius: 2px;
+            }
+
+            .interno {
+                height: 50px;
+                width: 50px;
+                border: 1px solid white;
+                border-radius: 50%;
+                font-size: 2rem;
+            }
+
+            .centralizar {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .cor-1 {
+                background-color: #6000ba;
+            }
+
+            .cor-2 {
+                background-color: #f12400;
+            }
+
+            .cor-3 {
+                background-color: #376e00;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Flexbox #3</h1>
+
+        <span>Container</span>
+        <div class="externo flexbox">
+            <div class="centralizar interno cor-1">1</div>
+            <div class="centralizar interno cor-2">2</div>
+            <div class="centralizar interno cor-3">3</div>
+        </div>
+
+        <a href="./exercicios.html">Voltar</a>
+    </body>
+</html>

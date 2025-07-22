@@ -1,0 +1,54 @@
+<html lang="pt-BR">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>Seletores CSS</title>
+        <style>
+            div {
+                font-size: 30px;
+            }
+
+            #primeiro-texto {
+                font-size: 45px;
+            }
+
+            .destaque {
+                background-color: crimson;
+                color: white;
+                padding: 10px;
+                border-radius: 2px;
+            }
+
+            [chic] {
+                letter-spacing: 10px;
+            }
+
+            button {
+                background-color: #41a014;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 2px;
+                border: none;
+                cursor: pointer;
+            }
+
+            [danger] {
+                background-color: crimson;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Seletores CSS #1</h1>
+
+        <div id="primeiro-texto">Texto #1</div>
+        <div class="destaque">Texto #2</div>
+        <div>Texto #3</div>
+        <div class="destaque" chic>Texto #4</div>
+        <div>Texto #5</div>
+        <div>
+            <button>Salvar</button>
+            <button danger>Cancelar</button>
+        </div>
+        <a href="./exercicios.html">Voltar</a>
+    </body>
+</html>

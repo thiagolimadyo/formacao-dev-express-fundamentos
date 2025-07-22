@@ -1,0 +1,56 @@
+<html lang="pt-BR">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>Flexbox</title>
+        <style>
+            html {
+                background-color: #292727;
+                color: white;
+            }
+
+            a:visited {
+                color: white;
+            }
+
+            .flexbox {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: 1rem;
+            }
+
+            .externo {
+                height: 400px;
+                background-color: brown;
+                border: 1px solid white;
+            }
+
+            .interno {
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                background-color: orange;
+                border: 1px solid white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Flexbox #1</h1>
+
+        <span>Container</span>
+        <div class="externo flexbox">
+            <div class="interno"></div>
+            <div class="interno"></div>
+            <div class="interno"></div>
+            <div class="interno"></div>
+            <div class="interno"></div>
+            <div class="interno"></div>
+            <div class="interno"></div>
+            <div class="interno"></div>
+            <div class="interno"></div>
+            <div class="interno"></div>
+        </div>
+
+        <a href="./exercicios.html">Voltar</a>
+    </body>
+</html>

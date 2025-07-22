@@ -1,0 +1,78 @@
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cadastro de Receitas e Despesas</title>
+    </head>
+    <body>
+        <form action="salvar">
+            <h1>Cadastro de Receitas e Despesas</h1>
+
+            <div>
+                <label for="descricao"><b>Descrição:</b></label>
+                <div>
+                    <input 
+                        type="text"
+                        id="descricao"
+                        name="descricao">                        
+                </div>              
+            </div><br>
+
+            <div>
+                <label for="observacao"><b>Observação:</b></label>
+                <div>
+                    <textarea name="observacao" id="observacao"></textarea>
+                </div>
+            </div><br>
+
+            <div>
+                <label><b>Tipo:</b></label>
+                <div>
+                    <label for="receita">Receita</label>
+                    <input 
+                        type="radio" 
+                        id="receita" 
+                        name="tipo" 
+                        value="receita">
+                    <label for="despesa">Despesa</label>
+                    <input 
+                        type="radio" 
+                        id="despesa" 
+                        name="tipo" 
+                        value="despesa">
+                </div>
+            </div><br>
+
+            <div>
+                <label for="valor"><b>Valor:</b></label>
+                <div>
+                    <input 
+                        type="number"
+                        id="valor"
+                        name="valor">
+                </div>
+            </div><br>
+
+            <div>
+                <label for="consolidado"><b>Consolidado:</b></label>
+                <div>
+                    <input type="checkbox" name="consolidado" id="consolidado">
+                </div>
+            </div><br>
+
+            <div>
+                <label for="conta"><b>Conta Associada:</b></label>
+                <div>
+                    <select name="conta" id="conta">
+                        <option value="itau">Itau</option>
+                        <option value="bradesco">Bradesco</option>
+                    </select>
+                </div>
+            </div><br>
+
+            <div>
+                <input type="submit" value="Salvar">
+                <input type="reset" value="Cancelar">
+            </div>
+        </form>
+    </body>
+</html>

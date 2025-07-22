@@ -1,0 +1,39 @@
+<html lang="pt-BR">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>Seletores CSS</title>
+        <style>
+            button {
+                background-color: #41a014;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 2px;
+                border: none;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #2e720f;
+            }
+
+            button[danger]:hover {
+                background-color: #850d25;
+            }
+
+            [danger] {
+                background-color: crimson;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Seletores CSS #2</h1>
+
+        <div>
+            <button>Salvar</button>
+            <button danger>Cancelar</button>
+        </div>
+        
+        <a href="./exercicios.html">Voltar</a>
+    </body>
+</html>
