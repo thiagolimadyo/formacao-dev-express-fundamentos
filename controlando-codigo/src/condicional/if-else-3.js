@@ -13,5 +13,4 @@ if (nota >= 9) {
     console.log('Reprovado!')
 }
 
-
 console.log(`\nA nota do aluno foi ${nota}!`)
