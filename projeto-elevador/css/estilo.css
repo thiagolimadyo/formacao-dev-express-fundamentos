@@ -1,0 +1,206 @@
+/* CSS Gerais */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: "VT323", monospace;
+    background-color: #111;
+}
+
+/* CSS dos controles */
+
+.controles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 100px;
+    background-color: #222;
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+.controles > .mostrador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: solid 4px goldenrod;
+    border-radius: 10px;
+    height: 100%;
+    width: 200px;
+    font-size: 2.5rem;
+}
+
+/* Css da calçada */
+
+.calcada {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex: 1;
+}
+
+/* CSS da rua */
+
+.rua {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    height: 100px;
+    background-color: #333;
+    border-top: 10px solid white;
+}
+
+.rua > .faixa {
+    flex: 1;
+    height: 2px;
+    background-color: #DDD;
+}
+
+/* CSS da árvore */
+
+.arvore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arvore::before {
+    content: "";
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.arvore::after {
+    content: "";
+    width: 20px;
+    height: 100px;
+    background-color:rgb(71, 17, 17);
+}
+
+/* CSS dos botões */
+
+.controles > button {
+    border: 4px solid goldenrod;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 2rem;
+}
+
+.controles > button.destaque{
+    border: 4px solid green;
+}
+
+/* CSS do Prédio */
+.predio {
+    display: flex;
+    gap: 10px;
+    width: 500px;
+    height: 100%;
+    background-color: #343843;
+}
+
+.coluna {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    background-color: #0006;
+}
+
+.andar {
+    display: flex;
+    flex:1;
+    align-items: flex-end;
+    justify-content: center;
+    border-bottom: solid 2px white;
+}
+
+.porta {
+    display: flex;
+    /* justify-content: flex-start; */
+    padding: 5%;
+    align-items: center;
+    width: 50px;
+    height: 60%;
+    background-color: #8B000C;
+    border: solid 2px #FFF9;
+    border-bottom-width: 0;
+    border-radius: 4px 4px 0 0;
+}
+
+.porta::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: white;
+    /* margin-left: 0.5rem; */
+}
+
+.terreo {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid 2px transparent;
+}
+
+.janela {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 50px;
+    background-color: #35707E;
+    border-radius: 2px;
+    border: solid 2px white;
+}
+
+.janela::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #FFF9;
+    border: solid 1px white;
+}
+
+.janela::after{
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: #fff9;
+    border: solid 1px white;
+}
+
+.poco {
+    position:relative;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
+    background-color: #FFF9;
+}
+
+.elevador{
+    position:absolute;
+    border: solid 3px black;
+    border-top-width: 10px;
+    width: 80%;
+    /* height: 100px; */
+    background-color: #FFFA;
+    bottom: 0;
+}
