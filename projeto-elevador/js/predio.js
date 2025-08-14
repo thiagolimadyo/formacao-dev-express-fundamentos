@@ -52,9 +52,34 @@
 
     // ----------------------------------------------- Elevador
 
+    function iniciarMovimentacao(){
+        const elevador = document.querySelector('.elevador')
+        elevador.setAttribute('em-movimentacao', '')
+    }
+
+    function finalizarMovimentacao(){
+        const elevador = document.querySelector('.elevador')
+        elevador.removeAttribute('em-movimentacao')
+    }
+
+    function emMovimentacao(){
+        const elevador = document.querySelector('.elevador')
+        return elevador.hasAttribute('em-movimentacao')
+    }
+
+    function iniciarOperacao(andar){
+        const botao = document.querySelector(`[destino="${andar}"]`)
+        botao.classList.add('destaque')
+    }
+
+    function finalizarOperacao(andar){
+        const botao = document.querySelector(`[destino="${andar}"]`)
+        botao.classList.remove('destaque')
+    }
+
     function obterTamanhoElevador(){
         const terreo = document.querySelector('div[andar="T"]')
-        console.log(terreo.clientHeight, terreo.offsetHeight)
+        // console.log(terreo.clientHeight, terreo.offsetHeight)
 
         return terreo.offsetHeight
     }
@@ -67,9 +92,63 @@
     elevador.style.height = obterTamanhoElevador()
 
     poco.appendChild(elevador)
+    }
 
+    function obterPosicaoAtual(){
+        const elevador = document.querySelector('.elevador')
+        return +elevador.style.bottom.replace(/\D/g, '')
+    }
+
+    function atualizarMostrador(texto){
+        const mostrador = document.querySelector('.mostrador')
+        mostrador.textContent = texto
+    }
+    
+    function moverElevador(andar){
+        if(emMovimentacao()) return
+
+        iniciarMovimentacao()
+        iniciarOperacao(andar)
+
+        const numero = andar === 'T' ? 0 : +andar;
+        const elevador = document.querySelector('.elevador')
+        
+        const posicaoInicial = obterPosicaoAtual()
+        const posicaoFinal = numero*obterTamanhoElevador()
+        const subindo = posicaoInicial < posicaoFinal
+
+        atualizarMostrador(subindo ? 'Subindo': 'Descendo')
+
+        let temporizador = setInterval(()=>{
+            const novaPosicao = obterPosicaoAtual() + (subindo? 10 : -10)
+            const terminou = posicaoFinal === obterPosicaoAtual()
+            elevador.style.bottom = terminou ? posicaoFinal : novaPosicao
+            
+            if(terminou){
+                clearInterval(temporizador)
+                atualizarMostrador(andar === 'T' ? 'Térreo' : `${numero}º Andar`)
+                finalizarMovimentacao()
+                finalizarOperacao(andar)
+            }
+           
+        },30)
+
+        // elevador.style.bottom = obterTamanhoElevador()*numero
+        // atualizarMostrador(andar === 'T' ? 'Térreo' : `${numero}º Andar`)
+    }
+
+    function aplicarControlesDoElevador(){
+        const botoes = document.querySelectorAll('[destino]')
+
+        botoes.forEach(botao => {
+            const destino = botao.getAttribute('destino')
+            botao.onclick = function(){
+                moverElevador(destino)
+            }
+        })
     }
 
     criarElevador()
+    aplicarControlesDoElevador()
 
 })()
