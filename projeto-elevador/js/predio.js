@@ -120,7 +120,7 @@
         atualizarMostrador(subindo ? 'Subindo': 'Descendo')
 
         let temporizador = setInterval(()=>{
-            const novaPosicao = obterPosicaoAtual() + (subindo? 10 : -10)
+            const novaPosicao = obterPosicaoAtual() + (subindo? 1 : -1)
             const terminou = posicaoFinal === obterPosicaoAtual()
             elevador.style.bottom = terminou ? posicaoFinal : novaPosicao
             
@@ -131,7 +131,7 @@
                 finalizarOperacao(andar)
             }
            
-        },30)
+        },1)
 
         // elevador.style.bottom = obterTamanhoElevador()*numero
         // atualizarMostrador(andar === 'T' ? 'Térreo' : `${numero}º Andar`)
