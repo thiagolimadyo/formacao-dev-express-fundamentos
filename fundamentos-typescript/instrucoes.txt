@@ -1,0 +1,3 @@
+Para criar um arquivo de configuração do typescript automaticamente, usar o comando:
+
+npx -p typescript tsc --init
